@@ -1,0 +1,17 @@
+Mazes are stored in text files and follow a particular format. We assume that our mazes are rectangular, and that they have walls along the entire outside of the maze, with no gaps in these outer walls. We will also specify a “start square” (S) and a “finish square” (F) to indicate the goal of the maze-solver — to get from S to F.
+
+Maze files should have the following structure:
+
+        <Number of columns> <Number of rows>
+        <0-based column number of the start square> <0-based row number of the start square> 
+        <0-based column number of the finish square> <0-based row number of the finish square> 
+        <Row 0 description>
+        <Row 1 description>
+        ...
+        
+Each row description includes a single character for each square in that row, and each character describes the right and top walls for its square. Specifically:
+
+7 means that the square has both a top wall and a right wall
+| (vertical bar or pipe) means that the square has a right wall, but no top wall
+_ (underscore) means that the square has a top wall, but no right wall
+* (asterisk) means that the square has neither a top wall nor a right wall
